@@ -162,10 +162,18 @@ Here are the most important rules
 
 ### 1. Write a method that accepts a first and a last name from the user and then says Hello to a full name 
 
--------
+def hello(fname,lname)
+ p "Hellom #{fname}#{lname}"
+end
+
+hello("doji","saber")
 
 ### 2. Write a method that swaps the values of two variables around and prints the new values
+def swap(f,l)
+ p "f =  #{l} l = #{f}"
+end
 
+swap("doji","saber")
 ------
 ### 3. Find-max
 #### Specs
@@ -174,6 +182,14 @@ This method should take two arguments (a, b), both Integers, and return another 
 `max(3, 9)` should return 9
 
 `max(5, 1)` should return 5
+
+def max (a,b)
+if a>b then p "highest is #{a}"
+else p "highest is #{b}"
+end
+end
+
+max(6,7)
 
 >Key Learning Points
 * Methods
@@ -197,6 +213,15 @@ It should not be affected by capital letters
 String methods
 return statement in methods
 Predicate methods (methods that return true or false)
+
+def palindrome(str)
+ 
+if str == str.reverse then return true
+else return false
+end
+end
+
+palindrome("samar")
 ------
 
 ### 5. Word-counter
@@ -208,13 +233,32 @@ This method should take one argument (sentence), a String, and return an Integer
 
 `word_counter("Bonjour Je suis Samar")` should return 4
 
+def word_counter(str)
+ 
+p str.split(' ').length
+
+end
+
+word_counter("The quick brown fox jumps over the lazy dog")
+
+word_counter("Bonjour Je suis Samar")
+
 ------
 
 ### 6. Current Date and Time
 
 #### Specs
 Write a ruby method that returns current date and time.
+def dandt()
+ 
+time = Time.new
+puts "Current Time : " + time.inspect
+# date = Time.new
+# puts "Current Date : " + 
 
+end
+
+dandt()
 ------
 
 ### 7. Get Name 
@@ -227,6 +271,17 @@ const getName = () => {
   return name;
 };
 ```
+
+def name()
+ 
+puts "please enter your name : " 
+input = gets.chomp
+return input
+
+
+end
+
+name()
 ------
 
 ### 8. Reverse It 
@@ -247,7 +302,13 @@ const reverseIt = () => {
   alert(reverse);
 };
 ```
+def reverse(str)
+ 
+ return str.reverse
 
+end
+
+reverse("sleep")
 ------
 
 
